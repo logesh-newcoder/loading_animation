@@ -1,0 +1,51 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color:black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.par{
+    height: 150px;
+    width: 150px;
+    position: relative;
+}
+.par div{
+    position: absolute;
+    width: 95%;
+    height: 95%;
+    transition: all 2s linear;
+    animation: rotate 2s infinite linear;
+    animation-delay:calc(0.1s * var(--i)) ;
+}
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+div .chi{
+    height: 20px;
+    width: 1px;
+    border-radius: 50%;
+    background-color:red;
+    animation: resize 2s linear infinite;
+    animation-delay:calc(0.1s * var(--i));
+}
+@keyframes resize{
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        transform: scale(10);
+        filter: hue-rotate(360deg);
+    }
+}
